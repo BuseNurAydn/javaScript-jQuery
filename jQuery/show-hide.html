@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show / Hide</title>
+
+    <!--<script src="https://code.jquery.com/jquery-3.7.1.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit in ut libero magnam mollitia perferendis porro nostrum, culpa suscipit nihil, nobis veniam eum excepturi dolorum architecto ipsam, eveniet deserunt minima odit repellat omnis temporibus eos id quisquam. Id, recusandae iure?</p>
+    <p id="p1">İleri Düzey Web Geliştirme</p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+
+    <script>
+        $(document).ready(function(){   
+            $("#hide").click(function(){
+                $("#p1").hide("slow");         //id' si hide olana tıklandığında p etiketinin içeriği gizlenecek
+            });
+
+            $("#show").click(function(){
+                $("#p1").show(4000);         //id' si show olana tıklandığında p etiketinin içeriği gösterilecek
+            });
+
+            //Tek bir butonla yapmak istersek eğer;
+            $("#toggle").click(function(){
+                $("#p1").toggle("fast");         
+            });
+
+            //Animasyonlu olması için;
+            //.hide("slow")
+            //.show("fast")
+            //.hide(2000, function(){
+
+           // })
+            //.hide(4000)
+
+        });
+    
+        
+    </script>
+    
+</body>
+</html>

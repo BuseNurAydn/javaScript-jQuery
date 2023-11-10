@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show / Hide</title>
+
+    <!--<script src="https://code.jquery.com/jquery-3.7.1.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</head>
+<body>
+
+    <div>
+        <p>İleri Düzey Web Geliştirme</p>
+
+        <img src="bio.jpg" width="200px"><br><br>
+
+    </div>
+
+    <button id="slideUp">Slide Up</button>
+    <button id="slideDown">Slide Down</button>
+    <button id="toggle">Slide Toggle</button>
+
+    <br><br>
+
+    <button id="fadein">Fade In</button>
+    <button id="fadeout">Fade Out</button>
+    <button id="fadeto">Fade To</button>
+    <button id="toggle2">Fade Toggle</button>
+
+
+
+    <script>
+        $(document).ready(function(){   
+            $("#slideUp").click(function(){
+                $("div").slideUp(2000);         //açılma
+            });
+
+            $("#slideDown").click(function(){
+                $("div").slideDown(2000);         //kapanma
+            });
+
+            //Tek bir butonla yapmak istersek eğer;
+            $("#toggle").click(function(){
+                $("div").slideToggle(2000);         
+            });
+
+            $("#fadein").click(function(){
+                $("div").fadeIn("slow");   //gösterildi      
+            });
+
+            $("#fadeout").click(function(){
+                $("div").fadeOut("slow");   //gizlendi      
+            });
+
+            //Tek bir butonla yapmak istersek eğer;
+            $("#toggle2").click(function(){   //gizlenip-gösterildi
+                $("div").fadeToggle("slow");         
+            });
+
+            $("#fadeto").click(function(){  //opacity 0.5 oldu
+                $("div").fadeTo("slow",0.5);         
+            });
+        });
+        
+    </script>
+    
+</body>
+</html>

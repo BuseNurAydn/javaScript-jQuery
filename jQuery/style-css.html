@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Selectors</title>
+
+    <!--<script src="https://code.jquery.com/jquery-3.7.1.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</head>
+<body>
+    <a href="#">Link 1</a>
+    <h3 id="header">Kurslarım</h3>
+    <ul id="liste">
+        <li class="item1">İleri Seviye Web Geliştirme Kursu</li>
+        <li>Orta Seviye Python Kursu <a href="#">Link 2</a></li>
+        <li>Mobil Geliştirme Kursu</li>
+    </ul>
+
+
+
+    <script>
+     //JavaScriptte
+       // document.getElementById("header").style.color="blue";
+        
+     //jquery de
+     $("#header").css("color","red");
+     $("#header").css("font-size","25px");
+     $("#liste a").css("text-decoration","none");
+     $("li").css("font-size","20px");
+
+     var styles ={
+         color: "black",
+         fontSize : "18px",
+         backgroundColor : "yellow",
+         textDecoration :"none",
+         border : "2px solid",
+         borderRadius : "5px",
+     }
+     $("a").css(styles);
+
+//BU ŞEKİLDE DE YAZILABİLİR. OBJE YAZMAYA GEREK KALMADAN
+     $("a").css({
+         color: "black",
+         fontSize : "18px",
+         backgroundColor : "yellow",
+         textDecoration :"none",
+         border : "2px solid",
+         borderRadius : "5px",
+     });
+
+    </script>
+    
+</body>
+</html>

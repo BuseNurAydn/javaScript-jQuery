@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Event</title>
+
+    <!--<script src="https://code.jquery.com/jquery-3.7.1.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+        integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        .paragrafrenk {
+            font-size: 25px;
+            color: brown;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p id="p1">İleri Düzey Web Geliştirme Kursu</p>
+    <p id="p2">İleri Düzey Web Geliştirme Kursu</p>
+    <p class="paragraf">İleri Düzey Web Geliştirme Kursu</p>
+    <p class="paragraf">İleri Düzey Web Geliştirme Kursu</p>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#p1").click(function () {
+                //console.log("paragrafa tıklandı")
+              $(this).addClass("paragrafrenk");
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

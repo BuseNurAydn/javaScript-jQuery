@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animasyon</title>
+
+    <!--<script src="https://code.jquery.com/jquery-3.7.1.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <style>
+        #box{
+            top: 50px;
+            position: absolute;
+            left: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: teal;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <button id="animate">Animasyon Buton</button>
+
+    <div id="box">
+
+    </div>
+    
+
+
+    <script>
+        $(document).ready(function(){
+            $("#animate").click(function(){
+                $("#box").animate(
+                   {
+                      left:"100px",
+                      width:"200px",
+                      height:"200px",
+                     // width:"3px",
+                     //height:"3px"
+                   },
+                   3000
+                )
+                $("#box").animate(
+                   {
+                      top:"200px",
+                      width:"1px",
+                      height:"1px",
+                   },
+                   3000
+                )
+
+            })
+        })
+      
+    </script>
+    
+</body>
+</html>
